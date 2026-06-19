@@ -1,0 +1,16 @@
+PROBLEM STATEMENT
+Suppose that you are the CEO of a startup which deals with network configuration for various companies. After 100 days of struggle, you have finally received your first assignment to configure the network for three different companies in such a way that all the PCs in each company must be able to communicate with each other as well as with all the PCs of any other company.
+
+The companies are named as CMP X, CMP Y and CMP Z.
+
+CMP X has 5 Rooms with 1 PC in each room.
+CMP Y has 3 Rooms with 3 PCs in each room.
+CMP Z has 2 Rooms with 4 PCs in each room.
+The IP regulating company has assigned the following IP network addresses to each of the company:
+
+CMP X: 144.186.96.0/19
+CMP Y: 50.152.0.0/15
+CMP Z: 210.98.169.64/26
+As part of the agreement, all three companies have asked you to bear the expense of all the switches and routers used to interconnect all the computers in a merged network for three companies and further instructed you that all the PCs in a single room must be on the same sub network and all the rooms of a single company must be on a different sub-network which will be assigned after sub-netting the assigned network address only for the relevant company (no outside network or the network of other company will be accepted) e.g, each room for CMP X will be assigned a different sub-network after sub-netting the address of 144.186.96.0/19 only and not any other network address. The companies have further informed you that companies plan to extend the number of their PCs in each room in the future.
+
+You, beign cleverly economical, decide to install old switces (Generic Switches in Cisco Packet Tracer) with only three Ethernet ports working out of four and routers (Generic Routers in Cisco Packet Tracer) to configure the network for three companies in such a way that you use as much less routers and switches as possible.
