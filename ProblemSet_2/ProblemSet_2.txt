@@ -1,0 +1,7 @@
+
+Welcome to the Small Office Network project using Cisco Packet Tracer. This project simulates a small office network with four distinct networks:
+
+Server Room
+Chairman Room
+IT Department
+Computer Department. This README file will guide you through the installation process, provide tutorials for learning Cisco Packet Tracer, and include steps for configuring end devices, switches, and routers.
