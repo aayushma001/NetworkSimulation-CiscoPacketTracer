@@ -1,4 +1,4 @@
-
+SMALL OFFICE SERVER NETWORK
 Welcome to the Small Office Network project using Cisco Packet Tracer. This project simulates a small office network with four distinct networks:
 
 Server Room
