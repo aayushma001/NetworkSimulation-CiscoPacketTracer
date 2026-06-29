@@ -25,3 +25,17 @@ access-list 1 permit 192.168.1.0 0.0.0.255
 Step 5: Configure PAT
 ip nat inside source list 1 interface gigabitEthernet0/1 overload
 
+Step 6: Save Configuration
+end
+write memory
+Verification
+Test from PC0
+ping 203.0.113.100
+Test from PC1
+ping 203.0.113.100
+Test from PC2
+ping 203.0.113.100
+Verification Commands
+show ip interface brief
+show ip nat statistics
+show running-config
