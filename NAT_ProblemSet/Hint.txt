@@ -1,0 +1,4 @@
+Router Configuration Commands
+Step 1: Enter Configuration Mode
+enable
+configure terminal
