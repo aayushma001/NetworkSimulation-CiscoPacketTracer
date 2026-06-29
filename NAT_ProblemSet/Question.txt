@@ -1,0 +1,2 @@
+A company has three computers connected to a private network. The company has been allocated only one public IP address by the ISP.
+Configure PAT (Port Address Translation) on the router so that all three computers can access an external server simultaneously using the single public IP address.
