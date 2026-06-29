@@ -19,3 +19,6 @@ ip nat outside
 no shutdown
 exit
 
+Step 4: Configure ACL
+access-list 1 permit 192.168.1.0 0.0.0.255
+
