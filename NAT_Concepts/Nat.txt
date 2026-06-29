@@ -1,3 +1,24 @@
 DEFINATION:
 Network Address Translation (NAT) is a networking technique that translates private IP addresses into public IP addresses (and vice versa) so that devices on a
 private network can communicate with devices on external networks such as the Internet.
+
+
+Private Network                        Internet
++--------------------+              +----------------+
+| PC A               |              | Web Server     |
+| 192.168.1.10       |              | 93.184.216.34  |
++---------+----------+              +--------+-------+
+          |                                  ^
+          |                                  |
+          v                                  |
++-------------------------+                  |
+| Router (NAT)            |------------------+
+| Private: 192.168.1.1    |
+| Public: 203.0.113.25    |
++-------------------------+
+
+NAT Translation:
+192.168.1.10  → 203.0.113.25
+
+NAT enables multiple devices with private IP addresses to access external networks by translating their private addresses into a public IP address
+and translating the responses back to the correct private device
