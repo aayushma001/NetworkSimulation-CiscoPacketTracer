@@ -1,0 +1,12 @@
+Design and Configure a Multi-Site Network Using VLSM and Routing
+
+You are required to design and configure the given Cisco Packet Tracer topology consisting of three company networks (CMPX, CMPY, and CMPZ) connected through multiple routers. Perform VLSM subnetting for the given networks: 144.186.96.0/19, 50.152.0.0/15, and 210.98.169.64/26. Divide the WAN network 199.210.121.160/28 into four /30 subnets for serial connections. Configure IP addresses on all router interfaces, enable interfaces, configure routing between all networks using static routing or a dynamic routing protocol, and verify connectivity between all PCs. Also perform testing using ping commands and check routing tables using appropriate Cisco commands.
+
+Tasks:
+
+Calculate subnet masks and create VLSM addressing tables.
+Configure router interfaces with correct IP addresses.
+Configure routing between all routers.
+Test communication between different LAN networks.
+Verify network status using Cisco commands.
+Troubleshoot possible connectivity issues.
