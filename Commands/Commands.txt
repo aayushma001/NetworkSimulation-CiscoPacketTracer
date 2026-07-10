@@ -51,4 +51,615 @@ Used to configure router/switch settings.
 Exit:
 Router(config)# exit
 
+2. BASIC DEVICE CONFIGURATION
+=========================================================
+
+Change Hostname:
+
+
+Command:
+hostname <name>
+
+Example:
+Router(config)# hostname R1
+
+
+---------------------------------------------------------
+
+Configure Enable Password:
+
+Command:
+enable secret <password>
+
+Example:
+R1(config)# enable secret cisco
+
+
+---------------------------------------------------------
+
+Configure Console Password:
+
+Commands:
+
+line console 0
+password cisco
+login
+
+
+Example:
+
+R1(config)# line console 0
+R1(config-line)# password cisco
+R1(config-line)# login
+
+
+---------------------------------------------------------
+
+Encrypt Passwords:
+
+Command:
+
+service password-encryption
+
+
+---------------------------------------------------------
+
+Configure Banner Message:
+
+Command:
+
+banner motd #Message#
+
+Example:
+
+banner motd #Unauthorized Access Prohibited#
+
+
+
+3. INTERFACE CONFIGURATION
+=========================================================
+
+View Interfaces:
+
+Command:
+
+show ip interface brief
+
+
+---------------------------------------------------------
+
+Enter Interface:
+
+Command:
+
+interface <interface-name>
+
+Example:
+
+interface gigabitEthernet 0/0
+
+or
+
+int g0/0
+
+
+---------------------------------------------------------
+
+Assign IP Address:
+
+Syntax:
+
+ip address <IP Address> <Subnet Mask>
+
+
+Example:
+
+ip address 192.168.1.1 255.255.255.0
+
+
+---------------------------------------------------------
+
+Enable Interface:
+
+Command:
+
+no shutdown
+
+
+---------------------------------------------------------
+
+Disable Interface:
+
+Command:
+
+shutdown
+
+
+---------------------------------------------------------
+
+Add Interface Description:
+
+Command:
+
+description <text>
+
+
+Example:
+
+description Connected_to_LAN
+
+
+
+4. CONFIGURATION VERIFICATION
+=========================================================
+
+Display Current Configuration:
+
+Command:
+
+show running-config
+
+Shortcut:
+
+show run
+
+
+---------------------------------------------------------
+
+Display Saved Configuration:
+
+Command:
+
+show startup-config
+
+
+---------------------------------------------------------
+
+Save Configuration:
+
+Commands:
+
+write
+
+or
+
+copy running-config startup-config
+
+
+
+5. IP ADDRESSING AND ROUTING COMMANDS
+=========================================================
+
+Display IP Interfaces:
+
+Command:
+
+show ip interface brief
+
+
+---------------------------------------------------------
+
+Display Routing Table:
+
+Command:
+
+show ip route
+
+
+Routing Codes:
+
+C = Connected Route
+
+S = Static Route
+
+R = RIP Route
+
+O = OSPF Route
+
+
+
+6. STATIC ROUTING COMMANDS
+=========================================================
+
+Static Route Syntax:
+
+ip route <destination network> <subnet mask> <next hop>
+
+
+Example:
+
+ip route 192.168.2.0 255.255.255.0 10.0.0.2
+
+
+---------------------------------------------------------
+
+Default Route:
+
+Syntax:
+
+ip route 0.0.0.0 0.0.0.0 <next hop>
+
+
+Example:
+
+ip route 0.0.0.0 0.0.0.0 200.100.50.2
+
+
+
+7. CONNECTIVITY TESTING COMMANDS
+=========================================================
+
+Ping Command:
+
+Syntax:
+
+ping <destination IP>
+
+
+Example:
+
+ping 192.168.1.10
+
+
+---------------------------------------------------------
+
+Traceroute Command:
+
+Syntax:
+
+traceroute <destination IP>
+
+
+Example:
+
+traceroute 8.8.8.8
+
+
+
+8. ARP COMMANDS
+=========================================================
+
+Display ARP Table:
+
+Command:
+
+show arp
+
+or
+
+show ip arp
+
+
+---------------------------------------------------------
+
+Clear ARP Table:
+
+Command:
+
+clear arp-cache
+
+
+
+9. SWITCH BASIC COMMANDS
+=========================================================
+
+View MAC Address Table:
+
+Command:
+
+show mac address-table
+
+
+---------------------------------------------------------
+
+Enter Switch Interface:
+
+Example:
+
+interface fastEthernet 0/1
+
+
+---------------------------------------------------------
+
+Configure Port Speed:
+
+Command:
+
+speed 100
+
+
+---------------------------------------------------------
+
+Configure Duplex:
+
+Command:
+
+duplex full
+
+
+
+10. VLAN CONFIGURATION COMMANDS
+=========================================================
+
+Create VLAN:
+
+Command:
+
+vlan <number>
+
+
+Example:
+
+vlan 10
+
+
+---------------------------------------------------------
+
+Assign VLAN Name:
+
+Example:
+
+vlan 10
+name SALES
+
+
+---------------------------------------------------------
+
+Assign Port to VLAN:
+
+Commands:
+
+interface fa0/1
+
+switchport mode access
+
+switchport access vlan 10
+
+
+---------------------------------------------------------
+
+View VLAN Information:
+
+Command:
+
+show vlan brief
+
+
+
+11. TRUNK CONFIGURATION
+=========================================================
+
+Configure Trunk Port:
+
+Commands:
+
+interface fa0/24
+
+switchport mode trunk
+
+
+---------------------------------------------------------
+
+Check Trunk Ports:
+
+Command:
+
+show interfaces trunk
+
+
+
+12. DHCP CONFIGURATION
+=========================================================
+
+Create DHCP Pool:
+
+Command:
+
+ip dhcp pool <pool-name>
+
+
+Example:
+
+ip dhcp pool LAN
+
+
+---------------------------------------------------------
+
+Configure Network:
+
+network <network address> <subnet mask>
+
+
+Example:
+
+network 192.168.1.0 255.255.255.0
+
+
+---------------------------------------------------------
+
+Configure Default Gateway:
+
+default-router <gateway IP>
+
+
+Example:
+
+default-router 192.168.1.1
+
+
+---------------------------------------------------------
+
+Configure DNS:
+
+dns-server 8.8.8.8
+
+
+---------------------------------------------------------
+
+Exclude IP Addresses:
+
+Command:
+
+ip dhcp excluded-address <start IP> <end IP>
+
+
+Example:
+
+ip dhcp excluded-address 192.168.1.1 192.168.1.20
+
+
+---------------------------------------------------------
+
+View DHCP Clients:
+
+Command:
+
+show ip dhcp binding
+
+
+
+13. STATIC NAT CONFIGURATION
+=========================================================
+
+Configure Static NAT:
+
+Syntax:
+
+ip nat inside source static <private IP> <public IP>
+
+
+Example:
+
+ip nat inside source static 192.168.1.10 200.100.50.10
+
+
+---------------------------------------------------------
+
+Configure Inside Interface:
+
+Commands:
+
+interface g0/0
+
+ip nat inside
+
+
+---------------------------------------------------------
+
+Configure Outside Interface:
+
+Commands:
+
+interface g0/1
+
+ip nat outside
+
+
+---------------------------------------------------------
+
+View NAT Translation:
+
+Command:
+
+show ip nat translations
+
+
+
+14. NETWORK TROUBLESHOOTING COMMANDS
+=========================================================
+
+Check Interface Status:
+
+Command:
+
+show interfaces
+
+
+---------------------------------------------------------
+
+Check Connected Devices:
+
+Command:
+
+show cdp neighbors
+
+
+---------------------------------------------------------
+
+Reload Device:
+
+Command:
+
+reload
+
+
+---------------------------------------------------------
+
+Erase Configuration:
+
+Commands:
+
+write erase
+
+or
+
+erase startup-config
+
+
+
+15. PACKET TRACER NETWORK TESTING FLOW
+=========================================================
+
+Step 1:
+Configure IP addresses
+
+Command:
+
+ip address
+
+
+Step 2:
+Enable interfaces
+
+Command:
+
+no shutdown
+
+
+Step 3:
+Configure routing
+
+Command:
+
+ip route
+
+
+Step 4:
+Check routing table
+
+Command:
+
+show ip route
+
+
+Step 5:
+Test connectivity
+
+Command:
+
+ping <destination IP>
+
+
+Step 6:
+Analyze packet path
+
+Command:
+
+traceroute <destination IP>
+
+
+
+=========================================================
+END OF CISCO PACKET TRACER COMMAND NOTES
+=========================================================
 
