@@ -1,0 +1,54 @@
+=========================================================
+        CISCO PACKET TRACER CLI COMMAND NOTES
+        BASIC TO INTERMEDIATE COMMANDS
+=========================================================
+
+
+1. CISCO CLI MODES
+=========================================================
+
+User EXEC Mode:
+Router>
+
+Used for basic monitoring commands.
+
+Example:
+Router> show version
+
+
+---------------------------------------------------------
+
+Privileged EXEC Mode:
+
+Command:
+Router> enable
+
+Prompt:
+Router#
+
+Used for advanced monitoring and configuration.
+
+Exit:
+Router# disable
+
+
+---------------------------------------------------------
+
+Global Configuration Mode:
+
+Command:
+Router# configure terminal
+
+or
+
+Router# conf t
+
+Prompt:
+Router(config)#
+
+Used to configure router/switch settings.
+
+Exit:
+Router(config)# exit
+
+
