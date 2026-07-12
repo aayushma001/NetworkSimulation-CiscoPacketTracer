@@ -632,34 +632,16 @@ Configure routing
 Command:
 
 ip route
-
-
 Step 4:
 Check routing table
-
 Command:
-
 show ip route
-
-
 Step 5:
 Test connectivity
-
 Command:
-
 ping <destination IP>
-
-
 Step 6:
 Analyze packet path
-
 Command:
-
 traceroute <destination IP>
-
-
-
-=========================================================
-END OF CISCO PACKET TRACER COMMAND NOTES
-=========================================================
 
