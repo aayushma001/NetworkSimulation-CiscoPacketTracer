@@ -632,7 +632,7 @@ Configure routing
 Command:
 
 ip route
-Step 4:
+Sktep 4:
 Check routing table
 Command:
 show ip route
