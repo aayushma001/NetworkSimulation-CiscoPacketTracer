@@ -327,20 +327,6 @@ show ip nat translations
 
 
 
-
-
-14. NETWORK TROUBLESHOOTING COMMANDS
-=========================================================
-Check Interface Status:
-Command:
-show interfaces
----------------------------------------------------------
-check Connected Devices:
-Command:
-
-show cdp neighbors
-
-
 ---------------------------------------------------------
 
 Reload Device:
@@ -391,4 +377,18 @@ Step 6:
 Analyze packet path
 Command:
 traceroute <destination IP>
+
+
+
+14. NETWORK TROUBLESHOOTING COMMANDS
+=========================================================
+Check Interface Status:
+Command:
+show interfaces
+---------------------------------------------------------
+check Connected Devices:
+Command:
+
+show cdp neighbors
+
 
