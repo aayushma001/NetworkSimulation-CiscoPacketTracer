@@ -4,3 +4,4 @@ b. Appropriate number of switches and routers should be used in the network.
 c. Using the given network address 192.168.40.0, all interfaces should be configured with appropriate IP addresses, subnet mask and gateways.
 d. All devices in the network should be connected using appropriate cables.
 e. Test the connectivity between ACCOUNTS and DELIVERY department -PCs in DELIVERY department should be able to ping the PCs in ACCOUNTS department.
+f. each approach shall not be regarding the switch and other also the PCs shall be contained with each associated switchs
